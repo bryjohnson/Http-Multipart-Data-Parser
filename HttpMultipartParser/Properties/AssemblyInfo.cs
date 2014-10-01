@@ -29,15 +29,20 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HttpMultipartParser")]
+[assembly: AssemblyTitle("HttpMultipartParser35")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HttpMultipartParser")]
-[assembly: AssemblyCopyright("Copyright © Jake Woods 2013")]
+[assembly: AssemblyProduct("HttpMultipartParser35")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: InternalsVisibleTo("HttpMultipartParserUnitTest")]
+[assembly: InternalsVisibleTo("HttpMultipartParserUnitTest35,PublicKey="+
+    "0024000004800000940000000602000000240000525341310004000001000100297330958f320e" +
+    "c4cd14a10ac1fd1a56dded9d524ad58f6e68e0f09eeafc2f7dd4105a16dc527efc9dbc36894a4d" +
+    "403ae38dbea29c9bff0e8456b252f35935f9102dc9d241b87401b1645b53a0dea1f795ce65ba62" +
+    "bcb630eebc639bcea04ebb96b80a0fda6dc88b9769c21062ae1aa4de201dd27b78caf12b8524d6" +
+    "8bfd5dd7")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
@@ -45,7 +50,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b9ed9178-5d4f-47e2-97ac-044c8f665277")]
+[assembly: Guid("5964F19D-A6FD-45CC-8901-49FC33EADEAB")]
 
 // Version information for an assembly consists of the following four values:
 //      Major Version

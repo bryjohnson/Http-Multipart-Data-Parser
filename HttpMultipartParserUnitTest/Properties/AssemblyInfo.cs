@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HttpMultipartParserUnitTest")]
+[assembly: AssemblyTitle("HttpMultipartParserUnitTest35")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HttpMultipartParserUnitTest")]
-[assembly: AssemblyCopyright("Copyright © Jake Woods 2013")]
+[assembly: AssemblyProduct("HttpMultipartParserUnitTest35")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1d7ced3e-5111-4194-a1fe-c0a7e35c0267")]
+[assembly: Guid("32D2B728-84D2-4267-AEC8-618C4FE6E845")]
 
 // Version information for an assembly consists of the following four values:
 //

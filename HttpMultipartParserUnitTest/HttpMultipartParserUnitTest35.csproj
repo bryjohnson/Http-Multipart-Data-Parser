@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HttpMultipartParserUnitTest</RootNamespace>
-    <AssemblyName>HttpMultipartParserUnitTest</AssemblyName>
+    <AssemblyName>HttpMultipartParserUnitTest35</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,6 +35,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>HttpMultipartParserUnitTest35.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
@@ -59,13 +65,16 @@
     <Compile Include="TestUtil.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HttpMultipartParser\HttpMultipartParser.csproj">
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HttpMultipartParser\HttpMultipartParser35.csproj">
       <Project>{4691988a-ce66-40cb-afb4-2757255e03e0}</Project>
-      <Name>HttpMultipartParser</Name>
+      <Name>HttpMultipartParser35</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <None Include="HttpMultipartParserUnitTest35.snk" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
