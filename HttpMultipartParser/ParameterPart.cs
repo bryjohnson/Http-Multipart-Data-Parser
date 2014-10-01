@@ -23,6 +23,8 @@
 //   stream.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+using System;
+
 namespace HttpMultipartParser
 {
     /// <summary>
@@ -33,6 +35,7 @@ namespace HttpMultipartParser
     ///     For our purposes a "parameter" is defined as any non-file data
     ///     in the multipart/form-data stream.
     /// </remarks>
+    [Serializable]
     public class ParameterPart
     {
         #region Constructors and Destructors

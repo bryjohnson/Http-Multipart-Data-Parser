@@ -311,7 +311,9 @@ namespace HttpMultipartParser
         {
             // Presumably the boundary is --|||||||||||||| where -- is the stuff added on to
             // the front as per the protocol and ||||||||||||| is the part we care about.
-            var boundary = string.Concat(reader.ReadLine().Skip(2));
+
+            //var boundary = string.Concat(reader.ReadLine().Skip(2));  // does not work in .NET 3.5.
+            var boundary = reader.ReadLine().Substring(2);
             reader.Buffer("--" + boundary + "\n");
             return boundary;
         }

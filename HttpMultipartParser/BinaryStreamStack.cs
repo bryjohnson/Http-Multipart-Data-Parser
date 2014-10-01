@@ -141,7 +141,8 @@ namespace HttpMultipartParser
             int value;
             while ((value = top.Read()) == -1)
             {
-                top.Dispose();
+                // Downgraded method 'Dispose' to 'Close' for .NET 3.5 compatibility.
+                top.Close();
                 this.streams.Pop();
 
                 if (!this.streams.Any())
@@ -301,7 +302,8 @@ namespace HttpMultipartParser
                         return builder.ToArray();
                     }
 
-                    top.Dispose();
+                    // Downgraded method 'Dispose' to 'Close' for .NET 3.5 compatibility.
+                    top.Close();
                     top = this.streams.Peek();
                     amountRead = top.Read(bytes, 0, bytes.Length);
                 }              
@@ -394,7 +396,8 @@ namespace HttpMultipartParser
         private BinaryReader NextStream()
         {
             BinaryReader top = this.streams.Pop();
-            top.Dispose();
+            // Downgraded method 'Dispose' to 'Close' for .NET 3.5 compatibility.
+            top.Close();
 
             return this.streams.Any() ? this.streams.Peek() : null;
         }

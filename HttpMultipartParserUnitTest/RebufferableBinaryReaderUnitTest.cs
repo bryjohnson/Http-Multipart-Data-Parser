@@ -231,9 +231,10 @@ namespace HttpMultipartParserUnitTest
             var bytes = reader.ReadByteLine();
             var expected = new byte[] {66, 111, 110, 106, 111, 117, 114, 32, 112, 111, 105, 103, 110, 195, 169, 101};
 
-            foreach (var pair in expected.Zip(bytes, Tuple.Create))
+            // The following loop was modified to downgraded .NET 3.5 compatibility.
+            for (int i = 0; i < expected.Length; i++)
             {
-                Assert.AreEqual(pair.Item1, pair.Item2);
+                Assert.AreEqual(expected[i], bytes[i]);
             }
         }
         #endregion

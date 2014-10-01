@@ -41,16 +41,19 @@
 
         public static string TrimAllLines(string input)
         {
-            return
-                string.Concat(
-                    input.Split('\n')
-                         .Select(x => x.Trim())
-                         .Aggregate((first, second) => first + '\n' + second)
-                         .Where(x => x != '\r'));
-            /*return Regex.Split(input, "\n")
+            //return
+            //    string.Concat(
+            //        input.Split('\n')
+            //             .Select(x => x.Trim())
+            //             .Aggregate((first, second) => first + '\n' + second)
+            //             .Where(x => x != '\r'));
+
+            // The above approach fails in .NET 3.5.
+
+            return Regex.Split(input, "\n")
                         .Select(x => x.Trim())
                         .Where(x => x != "\r")
-                        .Aggregate((first, second) => first + System.Environment.NewLine + second);*/
+                        .Aggregate((first, second) => first + System.Environment.NewLine + second);
         }
     }
 }

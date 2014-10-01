@@ -320,7 +320,11 @@ namespace HttpMultipartParserUnitTest
         [TestMethod]
         public void CorrectlyHandlesCRLF()
         {
-            string request = TinyTestCase.Request.Replace("\n", "\r\n");
+            // The following change handles the case where there could be mixed
+            // line endings.  Line endings are forced to single linefeeds before
+            // adding linefeed/carriage-return.
+            string request = TinyTestCase.Request.Replace("\r\n", "\n");
+            request = request.Replace("\n", "\r\n");
             using (Stream stream = TestUtil.StringToStream(request, Encoding.UTF8))
             {
                 var parser = new MultipartFormDataParser(stream, "boundry", Encoding.UTF8);
@@ -376,7 +380,8 @@ namespace HttpMultipartParserUnitTest
         {
             using (Stream stream = TestUtil.StringToStream(MultipleParamsAndFilesTestCase.Request, Encoding.UTF8))
             {
-                var parser = new MultipartFormDataParser(stream, "boundry", Encoding.UTF8, 16);
+                // Increased buffer size from 16 to 32 while downgrading to .NET 3.5.
+                var parser = new MultipartFormDataParser(stream, "boundry", Encoding.UTF8, 32);
                 Assert.IsTrue(MultipleParamsAndFilesTestCase.Validate(parser));
             }
         }

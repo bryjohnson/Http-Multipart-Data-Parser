@@ -23,7 +23,7 @@
 //   stream.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
+using System;
 using System.Linq;
 
 namespace HttpMultipartParser
@@ -34,6 +34,7 @@ namespace HttpMultipartParser
     ///     Represents a single file extracted from a multipart/form-data
     ///     stream.
     /// </summary>
+    [Serializable]
     public class FilePart
     {
         #region Constructors and Destructors
